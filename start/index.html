@@ -18,6 +18,8 @@
             <div v-if="seen">Seen</div>
             <div v-else>Not seen</div>
             <input type="text" v-model="message">
+            <h2>Loops</h2>
+            <div v-for="i in stuff">{{i}}</div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -29,7 +31,14 @@
             el: "#app", 
             data: { 
                 message: "Hello Codemash!",
-                seen: false
+                seen: false,
+                stuff: [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
             }
         })
     </script>
