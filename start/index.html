@@ -14,8 +14,9 @@
         <h2>Where we shame you into healthy living!</h2>
         <div id="app">
             <input v-model="message" v-once></input>
-            <div>{{message}}</div>
-            
+
+            <div v-if="seen">Seen</div>
+            <div v-else>Not seen</div>
             <input type="text" v-model="message">
         </div>
     </div>
@@ -27,7 +28,8 @@
         new Vue({
             el: "#app", 
             data: { 
-                message: "Hello Codemash!"
+                message: "Hello Codemash!",
+                seen: false
             }
         })
     </script>
